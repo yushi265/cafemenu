@@ -1,0 +1,70 @@
+/* 共通 */
+body{
+    background-color: rgb(240, 240, 240);
+}
+.border{
+    display: inline-block;
+    text-align: center;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* index.php */
+/* ヘッダー */
+.header{
+    width: 100%;
+    
+    background-image: url(header.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.header h1{
+    margin:0 auto;
+    text-align: center;
+    font-style: italic;
+    color: whitesmoke;
+    line-height: 410px;
+    font-size: 80px;
+}
+/* メニュ－ */
+.menu_container{
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: italic;
+}
+.menu_contents {
+    background-color: white;
+}
+.menu_image {
+    width: 400px;
+}
+.menu_container select {
+    font-size: 15px;
+}
+
+/* confirm.php */
+.confirm_container{
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* complete.php */
+.complete {
+    text-align: center;
+}
+
+/* view.php */
+.view_image {
+    width: 500px;
+}
+.view {
+    text-align: center;
+    padding-top: 100px;
+    font-style: italic;
+}
