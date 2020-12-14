@@ -1,6 +1,7 @@
 <?php
     require_once('menu.php');
     require_once('data.php');
+    require_once('food.php');
 ?>
 
 <!DOCTYPE html>
