@@ -25,7 +25,22 @@
             <div class="border">
                 <img class="view_image" src="<?php echo $menu->getImage() ?>" alt=""><br>
                 <p><?php echo $menu->getName() ?></p>
+                <?php
+                    if($menu instanceof Drink) {
+                        echo $menu->getStyle();
+                    }
+                ?>
+                <?php if($menu instanceof Food): ?>
+                    <?php for($i = 0; $i < $menu->getRate(); $i++): ?>
+                        <img class="star" src="img/star.png"> 
+                    <?php endfor ?>
+                <?php endif ?>
                 <p>￥ <?php echo $menu->getPrice() ?> －</p>
+                <div class="words">
+                    <p>～シェフの一言～</p>
+                    <?php echo $menu->getWords() ?>
+                </div>
+                
             </div>
         </div>
         

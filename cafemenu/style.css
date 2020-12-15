@@ -48,6 +48,7 @@ body{
     font-size: 15px;
 }
 
+
 /* confirm.php */
 .confirm_container{
     text-align: center;
@@ -61,10 +62,16 @@ body{
 
 /* view.php */
 .view_image {
-    width: 500px;
+    width: 700px;
 }
 .view {
     text-align: center;
-    padding-top: 100px;
+    padding-top: 30px;
     font-style: italic;
+    width: 900px;
+    margin: 0 auto;
+}
+.words {
+    width: 500px;
+    margin: 0 auto;
 }

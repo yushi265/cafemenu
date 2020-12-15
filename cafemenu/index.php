@@ -27,6 +27,17 @@
                     <div class="menu_contents border">
                         <img class="menu_image rounded" src="<?php echo $menu->getImage() ?>" alt="">
                         <a href="view.php?name=<?php echo $menu->getName() ?>"><p class="menu_name"><?php echo $menu->getName()?></p></a>
+                        <?php
+                            if($menu instanceof Drink) {
+                                echo $menu->getStyle();
+                            }
+                        ?>
+                        <?php if($menu instanceof Food): ?>
+                                <?php for($i = 0; $i < $menu->getRate(); $i++): ?>
+                                   <img class="star" src="img/star.png"> 
+                                <?php endfor ?>
+                        <?php endif ?>
+
                         <p class="menu_price">￥<?php echo $menu->getPrice()?> －</p>
                         <select name="<?php echo $menu->getName() ?>">
                             <?php for($i=0;$i<=10;$i++): ?>

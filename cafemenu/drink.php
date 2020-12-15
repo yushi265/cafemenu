@@ -3,8 +3,15 @@
 require_once('menu.php');
 
 class Drink extends Menu {
-    public function __construct($name,$price,$image) {
-        parent::__construct($name,$price,$image);
+    private $style;
+
+    public function __construct($name,$price,$image,$words,$style) {
+        parent::__construct($name,$price,$image,$words);
+        $this->style = $style;
+    }
+
+    public function getStyle() {
+        return $this->style;
     }
 }
 

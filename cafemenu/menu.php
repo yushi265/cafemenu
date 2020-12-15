@@ -4,12 +4,14 @@ class Menu {
     private $name;
     private $price;
     private $image;
+    private $words;
     private $count;
 
-    public function __construct($name,$price,$image) {
+    public function __construct($name,$price,$image,$words) {
         $this->name = $name;
         $this->price = $price;
         $this->image = $image;
+        $this->words = $words;
     }
 
     public function getName() {
@@ -22,6 +24,10 @@ class Menu {
 
     public function getImage() {
         return $this->image;
+    }
+
+    public function getWords() {
+        return $this->words;
     }
 
     public function getCount() {
