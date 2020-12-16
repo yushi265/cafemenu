@@ -75,3 +75,27 @@ body{
     width: 500px;
     margin: 0 auto;
 }
+.review {
+    padding: 50px;
+}
+.return_button {
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+.user_icon {
+    padding-left: 20px;
+}
+.user_icon img{
+    width: 40px;
+    border-radius: 20px;
+}
+.user_icon p {
+    font-size: 10px;
+}
+.review_contents {
+    display: flex;
+    padding: 0;
+    height: 70px;
+    line-height: 60px;
+    
+}

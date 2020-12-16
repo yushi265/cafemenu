@@ -2,9 +2,12 @@
     require_once('menu.php');
     require_once('data.php');
     require_once('food.php');
+    require_once('review.php');
+    require_once('user.php');
 
     $menuName = $_GET['name'];
     $menu = Menu::findByName($menus,$menuName);
+    $menuReviews = $menu->getReviews($reviews);
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +44,29 @@
                     <?php echo $menu->getWords() ?>
                 </div>
                 
+                <?php foreach($menuReviews as $review): ?>
+                    <?php $user = $review->getUser($users); ?>
+                    <div class="review">
+                        <p>～レビュー～</p>
+                        <div class="alert alert-info review_contents" role="alert">
+                            <div class="user_icon">
+                                <?php echo $user->getName() ?>
+                                <img src="<?php echo $user->getFace() ?>" alt="">   -      
+                            </div>
+                            <?php echo $review->getComment() ?></p>
+                        </div>
+                    </div>
+                <?php endforeach ?>
+
+                
             </div>
+            <br>
+            <div class="return_button">
+                <a href="index.php">
+                    <input class="btn btn-info pl-3 pr-3 pt-2 pb-2" type="button" value="戻る">
+                </a>
+            </div>
+            
         </div>
         
         

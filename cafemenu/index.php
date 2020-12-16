@@ -22,6 +22,7 @@
     <div class="container">
         <div class="menu_container">
             <h3>Menus</h3>
+            <p>全 <?php echo Menu::getMenuCount() ?> 品</p>
             <form action="confirm.php" id="count" method="post">
                 <?php foreach($menus as $menu): ?>
                     <div class="menu_contents border">

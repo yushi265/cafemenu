@@ -6,12 +6,14 @@ class Menu {
     private $image;
     private $words;
     private $count;
+    private static $menuCount = 0;
 
     public function __construct($name,$price,$image,$words) {
         $this->name = $name;
         $this->price = $price;
         $this->image = $image;
         $this->words = $words;
+        self::$menuCount++;
     }
 
     public function getName() {
@@ -28,6 +30,10 @@ class Menu {
 
     public function getWords() {
         return $this->words;
+    }
+
+    public static function getMenuCount() {
+        return self::$menuCount;
     }
 
     public function getCount() {
@@ -48,6 +54,16 @@ class Menu {
                 return $menu;
             }
         }
+    }
+
+    public function getReviews($reviews) {
+        $reviewsForMenu = array();
+        foreach($reviews as $review) {
+            if($review->getMenuName() == $this->name) {
+                $reviewsForMenu[] = $review;
+            }
+        }
+        return $reviewsForMenu;
     }
 }
 
