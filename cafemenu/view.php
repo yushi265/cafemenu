@@ -48,7 +48,12 @@
                     <?php $user = $review->getUser($users); ?>
                     <div class="review">
                         <p>～レビュー～</p>
-                        <div class="alert alert-info review_contents" role="alert">
+                        <?php if($user->getGender() == 'male'): ?>
+                                <div class="alert review_contents alert-info" role="alert">
+                        <?php else: ?>
+                                <div class="alert review_contents alert-danger" role="alert">
+                        <?php endif ?>
+                        
                             <div class="user_icon">
                                 <?php echo $user->getName() ?>
                                 <img src="<?php echo $user->getFace() ?>" alt="">   -      
@@ -63,7 +68,7 @@
             <br>
             <div class="return_button">
                 <a href="index.php">
-                    <input class="btn btn-info pl-3 pr-3 pt-2 pb-2" type="button" value="戻る">
+                    <input class="btn btn-info pl-3 pr-3 pt-2 pb-2" type="button" value="←一覧へ戻る">
                 </a>
             </div>
             

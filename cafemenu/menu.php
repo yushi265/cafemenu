@@ -7,6 +7,7 @@ class Menu {
     private $words;
     private $count;
     private static $menuCount = 0;
+    // private static $menus = array();
 
     public function __construct($name,$price,$image,$words) {
         $this->name = $name;
@@ -14,6 +15,7 @@ class Menu {
         $this->image = $image;
         $this->words = $words;
         self::$menuCount++;
+        // self::$menus[] = $this;
     }
 
     public function getName() {
